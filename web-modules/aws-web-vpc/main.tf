@@ -1,6 +1,7 @@
 # For sg name randomness
 resource "random_id" "sg_suffix" {
   byte_length = 8
+
 }
 
 resource "aws_vpc" "web_server_vpc" {
