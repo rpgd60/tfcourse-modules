@@ -1,7 +1,7 @@
 
 ## Create an auxiliary VPC
 module "vpc_test" {
-  source            = "../../../../modules/aws-web-vpc"
+  source            = "../../../aws-web-vpc"
   vpc_name          = "web_example1"
   subnet_name       = "web_example1"
   vpc_cidr_block    = "10.99.0.0/16"
@@ -10,7 +10,7 @@ module "vpc_test" {
 ## Create an instance in the newly created VPC
 ## Note references to outputs of module aws_web_vpc
 module "web_test" {
-  source            = "../../../../modules/aws-web-server-instance"
+  source            = "../../../aws-web-server-instance"
   os                = "ubuntu"
   ec2_instance_type = "t2.micro"
   ec2_instance_name = "web_example1"
