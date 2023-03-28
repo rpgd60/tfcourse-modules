@@ -9,6 +9,7 @@ resource "aws_vpc" "web_server_vpc" {
 
   tags = {
     Name = var.vpc_name
+    module_version = local.module_ver
   }
 }
 

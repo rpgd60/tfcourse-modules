@@ -13,6 +13,7 @@ resource "aws_instance" "web_server_instance" {
 
   tags = {
     Name = var.ec2_instance_name
+    module_version = local.module_ver
   }
 }
 
