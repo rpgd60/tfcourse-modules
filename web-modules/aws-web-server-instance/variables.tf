@@ -18,10 +18,10 @@ variable "ec2_instance_type" {
   type        = string
   validation {
     condition = anytrue([
-      var.ec2_instance_type == "t2.micro",
+      var.ec2_instance_type == "t3.nano",
       var.ec2_instance_type == "t3.micro"
     ])
-    error_message = "Instance type must be t2.micro or t3.micro "
+    error_message = "Instance type must be t3.nano or t3.micro "
   }
 }
 
