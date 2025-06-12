@@ -24,7 +24,7 @@ variable "subnet_name" {
 variable "aws_az" {
   description = "AZ where subnet will be created"
   type    = string
-  default = "eu-west-1a"
+  # default = "eu-west-1a"
 }
 
 variable "igw_name" {
